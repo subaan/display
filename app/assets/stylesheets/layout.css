@@ -5,7 +5,7 @@ body {
   font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
   font-size:   12px;
   line-height: 18px;
-  background:  whitesmoke;
+  background: #f5f7fa; /*background:  whitesmoke;*/
   width: 100%;
 }
 
@@ -14,9 +14,31 @@ body {
   white-space: nowrap;
 }
 
+input[type="text"], input[type="password"]{
+  background: #fff;
+}
+
+/*.btn-green {
+    color: #FFF;
+    background-color: #37BC9B;
+    border-color: transparent;
+}*/
+.btn{
+  background-image: none;
+  color: #FFF;
+  background-color: #37BC9B;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+}
+.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+    color: #333;
+    background-color: #37BC9B;
+}
+
 .sidebar {
   width: 270px;
-  margin: 0 0 0 3px;
+  margin: 0 0 0 0px;
   height: calc(100% - 48px);
   position: fixed;
   vertical-align: top;
@@ -30,6 +52,8 @@ body {
   position: relative;
   height: 28px;
   padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .sidebar .header .logo {
@@ -61,7 +85,7 @@ body {
 
 .sidebar .profile {
   width: 100%;
-  background: #eaeaea;
+  background: #2B957A;
   padding-top: 5px;
   padding-bottom: 20px;
 }
@@ -226,8 +250,8 @@ body {
 .sidebar.dark .profile {
   position: absolute;
   bottom: 0;
-  background: #555;
-  border-top: 1px solid #888;
+  /*background: #555;
+  border-top: 1px solid #888;*/
 }
 
 .sidebar.dark .profile .dropdown-menu {
@@ -282,7 +306,8 @@ body {
 }
 
 .sidebar.light .header .controls a {
-  color: #333;
+  color: #3A3F51;
+   font-weight: lighter;
 }
 
 .sidebar.light .header .controls a:hover {
@@ -291,13 +316,13 @@ body {
 
 .sidebar.light .profile {
   position: absolute;
-  bottom: 0;
-  background: #eaeaea;
+  bottom: 20px;
+  /*background: #eaeaea;*/
   border-top: 1px solid #ddd;
 }
 
 .sidebar.light .profile ul.menu > li > a {
-  color: black;
+  color: #fff;
 }
 
 .sidebar.light ul.menu > li {
@@ -309,7 +334,7 @@ body {
 }
 
 .sidebar.light ul.menu li > a .muted {
-  color: #666;
+  color: #3A3F51;
 }
 
 .sidebar.light ul.menu > li.minor.muted > a {
@@ -321,7 +346,7 @@ body {
 }
 
 .sidebar.light ul.menu > li > a:hover {
-  color: #aaa;
+color: #3A3F51;
 }
 
 .sidebar.light ul.menu > li.title {
@@ -436,19 +461,22 @@ body {
 
 .top-nav {
   z-index: 20;
-  background: whitesmoke;
+  background-color: #2B957A;
+  background-image: linear-gradient(to right, #2B957A 0%, #37BC9B 100%);
+  background-repeat: repeat-x;
+  /*width: 100%;  Added this style for Full width */
 }
 
 #container {
   position: relative;
-  width:    970px;
+   width:    970px;  /*-- > Editied for full width  width: 100%; */
   margin:   0 auto;
   overflow-x: hidden;
   white-space: normal;
 }
 
 #container.sidebar-visible {
-  width: 1240px;
+  width: 1240px; /* width: 100%; */
 }
 
 #container a {
@@ -464,15 +492,17 @@ body {
 	color: #888;
 	font-size: 12px;
 	text-align: left;
+  width: 100%; /* Added for width Adjustment*/
 }
 
 #logo {
-  float:     left;
+  /*float:     left;*/
   position:  relative;
   font-size: 11px;
   margin:    10px 10px 0px 0px;
   padding:   0px 0px 0px 0px;
   color:     #555;
+  text-align: center; /* Added for Alignment*/
 }
 
 #logo img {
@@ -608,9 +638,9 @@ img.authicon {
 }
 
 #header {
-  width:    960px;
+  width:    960px; /* width: 100%;*/
   margin:   5px;
-  height:   30px;
+  height:   33px;
   position: relative;
 }
 
@@ -619,10 +649,12 @@ img.authicon {
   position: relative;
   margin:   2px 5px 0 8px;
   font-size: 24px;
+  padding-left: 20px; /* Adding for adjust padding*/
+  padding-top: 5px;  /* Adding for adjust padding*/
 }
 
 .sidebar-toggle > a {
-  color: black;
+  color: white;
   padding-right: 5px;
   opacity: 0.8;
 }
@@ -631,10 +663,16 @@ img.authicon {
   float:    left;
   position: relative;
   margin: 2px 0 0 0;
+  background: #fff;
+  border-radius: 4px;
 }
 
 .brand .brand-logo {
   height:   24px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 8px;
 }
 
 #ajax {
@@ -648,6 +686,7 @@ img.authicon {
   position: relative;
   float: right;
   margin: 3px 5px 5px 0px;
+  padding-right: 30px;
 }
 
 #user_nav ul {
@@ -661,11 +700,11 @@ img.authicon {
 #user_nav a {
   padding-left: 15px;
   font-size:     16px;
-  color: #333333;
+  color: #fff;
 }
 
 #user_nav a:hover {
-  color: #4183C4;
+  color: #3A3F51;
 }
 
 #user_nav i {
@@ -752,9 +791,10 @@ img.authicon {
   position:           relative;
   float:              left;
   clear:              both;
-  width:              958px;
+  width:              968px;
+ /*   width:              100%;--> Added This For Full Width */
   height:             48px;
-  margin:             0px 5px 0px 5px;
+  margin:             0px 0px 0px 0px;
   padding:            0px;
   z-index:            10;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -763,7 +803,7 @@ img.authicon {
 }
 
 .sidebar-visible #title_bar {
-  width: 1238px;
+  width: 1238px;  /* width: 100%;*/
   margin: 0;
 }
 
@@ -790,6 +830,7 @@ img.authicon {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 33%;
+  padding-left: 25px; /* Adding for Text Alignment*/
 }
 
 .title_text i {
@@ -804,7 +845,7 @@ img.authicon {
 
 #container .title_text a:hover {
   text-decoration: underline;
-  color: #aaa;
+  color: #2b957a;
 }
 
 #title img {
@@ -828,6 +869,7 @@ img.authicon {
   list-style-type: none;
   padding:         0;
   margin:          0;
+  padding-right: 25px; /* Adding for Text Alignment*/
 }
 
 #app_nav > ul > li {
@@ -852,7 +894,8 @@ img.authicon {
 }
 
 #app_nav > ul > li:hover {
-  background: #000;
+  background: #4B526B;
+  color: #34B293 !important;
 }
 
 #app_nav .dropdown-menu {
@@ -946,7 +989,7 @@ img.authicon {
 }
 
 #page_header_container {
-  margin-top: 88px;
+   margin-top: 88px; /* margin-top: 112px;*/
 }
 
 .sidebar-visible #page_header_container {
@@ -967,12 +1010,14 @@ img.authicon {
   position: relative;
   z-index: 10;
   clear: both;
-  width: 950px;
-  margin: 0px 9px 0px 9px;
+  width: 968px;
+  margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   border-left: solid 1px #ddd;
   border-right: solid 1px #ddd;
-  background: #eaeaea;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+  background: #FAFBFC;
 }
 
 
@@ -1107,7 +1152,7 @@ img.authicon {
   float:       left;
   position:    relative;
   clear:       both;
-  margin:      5px 5px 10px 12px;
+  margin:      10px 5px 10px 12px;
   padding-left: 5px;
   font-size:   18px;
   width: 98%;
@@ -1125,7 +1170,7 @@ img.authicon {
 
 #page_title_text {
   float:          left;
-  font-size:      26px;
+  font-size:      18px;
   line-height:    30px;
   padding:        0;
 }
@@ -1143,7 +1188,7 @@ img.authicon {
   float:       left;
   position:    relative;
   font-weight: normal;
-  color:       #000;
+  color:       #33B191;
   padding:     0px 5px 0px 5px;
 }
 
@@ -1177,7 +1222,7 @@ img.authicon {
 	position: relative;
 	float: left;
 	width: 90%;
-	color: #888;
+	color: #656565;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 24px;
@@ -1200,12 +1245,12 @@ img.authicon {
 #page_bar {
 	position: relative;
 	float: left;
-	width: 950px;
+	width: 968px;
 	height: 42px;
-	background-color: #eaeaea;
-	background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+	background-color: #FAFAFA;
+	/*background-image: -moz-linear-gradient(#fafafa, #eaeaea);
 	background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
-	background-image: linear-gradient(#fafafa, #eaeaea);
+	background-image: linear-gradient(#fafafa, #eaeaea);*/
 	background-repeat: repeat-x;
 	border-top: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
@@ -1214,7 +1259,7 @@ img.authicon {
 #page_nav {
   float:     left;
   position:  relative;
-  margin:    0px 10px 0px 10px;
+  margin:    0px 10px 0px 0px;
   font-size: 15px;
 }
 
@@ -1251,7 +1296,7 @@ img.authicon {
 
 #page_nav ul li .selected {
   color:                 #000;
-  border-bottom:            3px solid orange;
+  border-bottom:            3px solid #34B292;
 	/*background-color: whitesmoke;*/
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
@@ -1259,7 +1304,7 @@ img.authicon {
 
 #page_nav ul li a:hover {
 	color:                 #333;
-	border-bottom:            3px solid orange;
+	border-bottom:            3px solid #34B292;
 }
 
 #wizard {
@@ -1359,13 +1404,14 @@ img.authicon {
   float:      left;
   position:   relative;
   width:      930px;
+   /* Fix For Full Width width:      100%;*/
   min-height:  80vh;
   /*min-height: 640px;*/
   overflow-x:   hidden;
   margin:     0px 9px 0px 9px;
   padding:    10px 10px 10px 10px;
-  border:     solid 1px #ddd;
-  background: #fff;
+  /*border:     solid 1px #ddd;
+  background: #fff;*/
   /*	background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#eee));
    background: -moz-linear-gradient(top,  #ddd,  #eee);
    filter:  progid
@@ -1375,8 +1421,8 @@ img.authicon {
 #signin {
 	position: relative;
 	width: 640px;
-	height: 500px;
-	margin: 150px auto;
+	/*height: 500px; Commented for footer adjustement*/
+	margin: 104px auto; /*margin: 150px auto; Adjusted For login Alignment*/
   padding: 10px 5px 10px 10px;
 	font-size: 14px;
 }
@@ -2313,9 +2359,10 @@ img.authicon {
 
 .section-heading .section-title {
 	position: relative;
-	float: left;
+	/*float: left;  commented for text alignment*/
 	margin-left: 0px;
   padding: 10px 0px 10px 10px;
+  text-align: center;
 }
 
 .section-heading .content-toggle {
