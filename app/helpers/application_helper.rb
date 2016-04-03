@@ -35,7 +35,7 @@ module ApplicationHelper
 
   def title(page_title)
     content_for(:title) { content_tag(:div, page_title.html_safe, :id => "title_text") }
-    content_for(:title_clean) {"#{page_title.gsub( /<.+?>/, '')} - OneOps"}
+    content_for(:title_clean) {"#{page_title.gsub( /<.+?>/, '')} - Prana"}
   end
 
   def organization_home
@@ -63,7 +63,7 @@ module ApplicationHelper
   def root_page_header(selected = nil)
     return unless user_signed_in?
     content_for(:title) { content_tag(:div, link_to(current_user.username, root_path).html_safe, :class => 'title_text' ) }
-    content_for(:title_clean) {'OneOps' }
+    content_for(:title_clean) {'Prana' }
 
     menu_items = [{:label => 'profile',   :link => account_profile_path}]
     if selected
