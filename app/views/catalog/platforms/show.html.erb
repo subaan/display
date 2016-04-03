@@ -1,0 +1,42 @@
+<%= organization_page_header('catalogs') %>
+
+<%= breadcrumb [{:label => 'catalogs', :link => catalogs_path},
+                {:label => @catalog.ciName, :kind => 'Catalog', :link => catalog_path(@catalog)}] %>
+
+<%= page_title :page_icon     => ci_image_url(@platform),
+               :page_kind     => 'Platform',
+               :page_label    => @platform.ciName,
+               :doc_link      => platform_doc_link(@platform, icon('book'), :anchor => 'design', :class => 'doc-link'),
+               :page_sublabel => @platform.ciAttributes.description %>
+
+<%= page_info 'View platform configuration' %>
+
+<%= section_panel 'Components', :width => 'single', :position => 'right' do %>
+  <%= grouped_ci_list(@component_groups) do |group_builder, group| %>
+    <% group_items = group[:items] %>
+    <% group_builder.icon ci_class_image_url(group[:class_name]) %>
+    <% group_builder.title do %>
+      <%= group[:template_name] %>
+    <% end %>
+    <% group_builder.menu do %>
+      <% if group_items.present? %>
+        <span class="label label-count"><%= group_items.size %></span>
+      <% end %>
+
+    <% end %>
+
+    <%= group_builder.items(group_items) do |item_builder, ci| %>
+      <% item_builder.attributes raw(%(ciName="#{ci.ciName}")) %>
+      <% item_builder.target link_to('', edit_catalog_platform_component_path(@catalog, @platform, ci)) %>
+      <% item_builder.icon :none %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<div id="page_nav_diagram">
+  <%= loading_indicator %>
+  <script>
+    <%= remote_function(:url => diagram_catalog_platform_path(@catalog, @platform, :size => '6,4'), :method => :get) %>
+  </script>
+</div>
+
