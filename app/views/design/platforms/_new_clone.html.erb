@@ -18,11 +18,11 @@
   </div>
 
   <div class="modal-footer">
-	<%= link_to_function('cancel', 'hide_modal()', :class => 'btn btn-large btn-danger') %>
+	<%= link_to_function('cancel', 'hide_modal()', :class => 'btn  btn-danger') %>
     <% busy_options = {:url    => clone_assembly_design_platform_path(@assembly, @platform),
                              :method => :post,
                              :with   => "'to_assembly_id='+$j('select#to_assembly_id').val()+'&to_ci_name='+$j('input[type=text]#to_ci_name').val()",
-                             :class  => 'btn btn-large btn-success'} %>
+                             :class  => 'btn  btn-success'} %>
     <%= link_busy('ok', busy_options) %>
   </div>
 </div>

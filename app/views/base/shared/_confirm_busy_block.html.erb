@@ -22,7 +22,7 @@
   </div>
 
   <div class="modal-footer">
-    <%= link_to_function('Cancel', 'hide_modal()', :class => 'btn btn-large btn-danger') %>
+    <%= link_to_function('Cancel', 'hide_modal()', :class => 'btn btn-danger') %>
     <% method_option = (defined?(method) == 'local-variable' ? method : :get)
        busy_message  = defined?(busy) && busy.present? %>
     <% if defined?(remote) && remote == false %>
@@ -30,10 +30,10 @@
                   url,
                   :method  => method_option,
                   :remote  => false,
-                  :class   => 'btn btn-large btn-success',
+                  :class   => 'btn  btn-success',
                   :onclick => "show_busy(#{"'#{escape_javascript(busy)}'" if busy_message})") %>
     <% else %>
-      <%= busy_options = {:url => url, :method => method_option, :class => 'btn btn-large btn-success'}
+      <%= busy_options = {:url => url, :method => method_option, :class => 'btn  btn-success'}
           busy_options[:with]    = busy_with.join("+'&'+") if busy_with
           busy_options[:message] = busy if busy_message
           link_busy('Ok', busy_options) %>

@@ -43,11 +43,11 @@
   </div>
 
   <div class="modal-footer">
-    <%= link_to_function('cancel', 'hide_modal()', :class => 'btn btn-danger btn-large') %>
+    <%= link_to_function('cancel', 'hide_modal()', :class => 'btn btn-danger') %>
     <% busy_options = {:url    => clone_assembly_path(@assembly),
                        :method => :post,
                        :with   => "'to_org='+$j('#assembly_clone_modal #to_org').val()+'&ciName='+$j('#assembly_clone_modal #ciName').val()+'&description='+$j('#assembly_clone_modal #description').val()#{"+'&export=#{params[:export]}'" unless clone}",
-                       :class  => 'btn btn-success btn-large'} %>
+                       :class  => 'btn btn-success'} %>
     <%= link_busy('ok', busy_options) %>
   </div>
 </div>

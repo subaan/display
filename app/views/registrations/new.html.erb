@@ -1,6 +1,6 @@
 <%= title 'Sign Up' %>
 <div id="signin">
-  <%= section_panel 'Welcome to OneOps - Sign up' do %>
+  <%= section_panel 'Welcome to TwoOps - Sign up' do %>
     <% if session[:omniauth] %>
       <div class="alert alert-success alert-block">
         <h4><%= session[:omniauth][:provider].capitalize %> <%= icon("#{session[:omniauth][:provider]}-sign") %> authentication successful!</h4>
@@ -67,7 +67,7 @@
 
       <div class="control-group">
         <div class="controls">
-          <%= f.submit "Sign up", :class => "btn btn-large btn-success" %>
+          <%= f.submit "Sign up", :class => "btn btn-success" %>
           ... or <strong><%= link_to "Sign in", new_session_path(resource_name) %></strong>
         </div>
       </div>
@@ -78,4 +78,3 @@
     <% end %>
   <% end %>
 </div>
-

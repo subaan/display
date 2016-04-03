@@ -1,6 +1,6 @@
 <%= title 'Sign in' %>
 <div id="signin">
-  <%= section_panel 'Welcome to OneOps - Sign in' do %>
+  <%= section_panel 'Welcome to Prana - Sign in' do %>
     <%= form_for(resource,
                  :as => resource_name,
                  :url => session_path(resource_name),
@@ -30,7 +30,7 @@
 
       <div class="control-group">
         <div class="controls">
-          <%= f.submit 'Sign in', :class => 'btn btn-large btn-success' %>
+          <%= f.submit 'Sign in', :class => 'btn  btn-success' %>
           <% if Settings.authentication == 'database' %>
             ... or <strong><%= link_to 'Sign up', new_registration_path(resource_name) %></strong>
           <% end %>
