@@ -71,8 +71,8 @@
             <li>
               <%= link_confirm_busy(icon_button('undo', 'Undo Replace', 'info'),
                                     :url     => state_assembly_operations_instance_path(@assembly, @instance, :params => {:state => 'default'}),
-                                    :body    => "This will mark the component instance '#{@instance.ciName}' back to the default state in Prana and cancel the pending replacement.".html_safe,
-                                    :confirm => 'Undo Replace?',
+                                    :body    => "This will mark the component instance '#{@instance.ciName}' back to the default state in Prana and cancel the pending live replacement.".html_safe,
+                                    :confirm => 'Undo Live Replace?',
                                     :method  => :put) %>
             </li>
           </ul>

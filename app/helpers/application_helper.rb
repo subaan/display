@@ -860,7 +860,7 @@ module ApplicationHelper
 
       Cms::DjRelation.all(:params => {:ciId => node.toCiId, :relationShortName => 'DependsOn', :direction => 'from'}).each do |edge|
         if edge.relationAttributes.flex == 'true'
-          edgelabel = "<<table border='0' cellspacing='1'><tr><td border='1' colspan='2'><font point-size='12'>Scale</font></td></tr>"
+          edgelabel = "<<table border='0' cellspacing='1'><tr><td border='1' colspan='2'><font point-size='12'>LiveScale</font></td></tr>"
           edgelabel << "<tr><td align='left'>Minimum</td><td>#{edge.relationAttributes.min}</td></tr>"
           edgelabel << "<tr><td align='left' bgcolor='#D9EDF7'>Current</td><td bgcolor='#D9EDF7'>#{edge.relationAttributes.current}</td></tr>"
           edgelabel << "<tr><td align='left'>Maximum</td><td>#{edge.relationAttributes.max}</td></tr>"
