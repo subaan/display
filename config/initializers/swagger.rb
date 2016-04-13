@@ -41,8 +41,8 @@ Swagger::Docs::Config.register_apis(
       # add custom attributes to api-docs
       :attributes         => {
         :info => {
-          'title'             => 'OneOps',
-          'description'       => 'OneOps API docs',
+          'title'             => 'Prana',
+          'description'       => 'Prana API docs',
           'termsOfServiceUrl' => '',
           'contact'           => '',
           'license'           => 'Apache 2.0',

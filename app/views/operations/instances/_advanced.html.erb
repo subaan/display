@@ -4,7 +4,7 @@
     for replacement and you need to force a deployment in this environment to execute the replacement.</p>
   <%= link_confirm_busy(icon_button('exchange', 'Replace', 'success'),
                         :url     => state_assembly_operations_instance_path(@assembly, @instance, :params => {:state => 'replace'}),
-                        :body    => "This will mark the component instance '#{@instance.ciName}' for replacement in OneOps. Your cloud resources will not be affected immediately. To completely execute the replacement you will need to force a deployment.".html_safe,
+                        :body    => "This will mark the component instance '#{@instance.ciName}' for replacement in Prana. Your cloud resources will not be affected immediately. To completely execute the replacement you will need to force a deployment.".html_safe,
                         :confirm => 'Replace?',
                         :method  => :put) %>
   <hr/>
@@ -15,7 +15,7 @@
   </p>
   <%= link_confirm_busy(icon_button('undo', 'Undo Replace', 'info'),
                         :url     => state_assembly_operations_instance_path(@assembly, @instance, :params => {:state => 'default'}),
-                        :body    => "This will mark the component instance '#{@instance.ciName}' back to the default state in OneOps and undo the pending replacement.".html_safe,
+                        :body    => "This will mark the component instance '#{@instance.ciName}' back to the default state in Prana and undo the pending replacement.".html_safe,
                         :confirm => 'Undo Replace?',
                         :method  => :put) %>
   <hr/>
@@ -46,7 +46,7 @@
 </p>
 <%= link_confirm_busy(icon_button('trash', 'Remove', 'danger'),
                       :url     => assembly_operations_environment_platform_component_instance_path(@assembly, @environment, @platform, @component, @instance),
-                      :body    => "This will remove component instance '#{@instance.ciName}' data from OneOps only. Your cloud resources will not be terminated.".html_safe,
+                      :body    => "This will remove component instance '#{@instance.ciName}' data from Prana only. Your cloud resources will not be terminated.".html_safe,
                       :confirm => 'Remove?',
                       :method  => :delete) %>
 -->

@@ -1,4 +1,4 @@
-OneOps Web Application
+Prana Web Application
 ======================
 
 pg gem install issue on osx:

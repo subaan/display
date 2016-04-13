@@ -135,7 +135,7 @@
         render_modal("<%= dialog_options[:modal_id] %>",
                      "<%= escape_javascript(render('base/shared/confirm_busy_block',
                      dialog_options.merge({:confirm => 'Replace?',
-                                           :body    => 'This will mark selected instances for replacement in OneOps. Your cloud resources will not be affected immediately. To completely execute the replacement you will need to force a deployment.',
+                                           :body    => 'This will mark selected instances for replacement in Prana. Your cloud resources will not be affected immediately. To completely execute the replacement you will need to force a deployment.',
                                            :with    => "'state=replace&'+window.bulk_replace_ids"}))) %>");
       }
       else {
@@ -143,7 +143,7 @@
         render_modal("<%= dialog_options[:modal_id] %>",
                      "<%= escape_javascript(render('base/shared/confirm_busy_block',
                        dialog_options.merge({:confirm => 'Undo Replace?',
-                                             :body    => 'This will mark selected instances back to the default state in OneOps and will undo the pending replacement.',
+                                             :body    => 'This will mark selected instances back to the default state in Prana and will undo the pending replacement.',
                                              :with    => "'state=default&'+window.bulk_replace_ids"}))) %>");
       }
     };

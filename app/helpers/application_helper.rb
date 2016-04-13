@@ -57,7 +57,7 @@ module ApplicationHelper
 
   def organization_title
     content_for(:title) { organization_home }
-    content_for(:title_clean) {"#{current_user.organization_id? ? current_user.organization.name : ''} | OneOps" }
+    content_for(:title_clean) {"#{current_user.organization_id? ? current_user.organization.name : ''} | Prana" }
   end
 
   def root_page_header(selected = nil)
@@ -102,7 +102,7 @@ module ApplicationHelper
     content << content_tag(:div, ' / ', :class => 'title_text')
     content << content_tag(:div, link_to(assembly.ciName, assembly_path(assembly)).html_safe, :class => 'title_text')
     content_for(:title) { content.html_safe }
-    content_for(:title_clean) {  "#{assembly.ciName} - #{current_user.organization.name} | OneOps" }
+    content_for(:title_clean) {  "#{assembly.ciName} - #{current_user.organization.name} | Prana" }
   end
 
   def assembly_page_header(assembly, selected = nil)

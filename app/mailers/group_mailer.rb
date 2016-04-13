@@ -1,6 +1,6 @@
 class GroupMailer < ActionMailer::Base
   logger.level = Logger::INFO unless Rails.env.development? || Rails.env.shared?
-  default :from => "\"OneOps Support\" <#{Settings.support_email}>"
+  default :from => "\"Prana Support\" <#{Settings.support_email}>"
 
   def added_to_group(user, group, admin_user)
     @user       = user

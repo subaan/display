@@ -1,6 +1,6 @@
 class NotificationMailer < ActionMailer::Base
   logger.level = Logger::INFO unless Rails.env.development? || Rails.env.shared?
-  default :from => "\"OneOps Support\" <#{Settings.support_email}>"
+  default :from => "\"Prana Support\" <#{Settings.support_email}>"
 
   def notification(recipients, data, component_health = nil)
     @data = data
