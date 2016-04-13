@@ -7,9 +7,9 @@ defaults: &defaults
 
   news_url: <%= ENV['NEWS_URL'] %>
   help_url: <%= ENV['HELP_URL'] %>
-  feedback_url: <%= ENV['FEEDBACK_URL'] || 'https://oneops.slack.com/messages/feedback/' %>
+  feedback_url: <%= ENV['FEEDBACK_URL'] || '#' %>
   report_problem_url: <%= ENV['REPORT_PROBLEM_URL'] %>
-  support_chat_url: <%= ENV['SUPPORT_CHAT_URL'] || 'https://oneops.slack.com/messages/help/' %>
+  support_chat_url: <%= ENV['SUPPORT_CHAT_URL'] || '#' %>
   terms_of_service_url: <%= ENV['TERMS_OF_SERVICE_URL'] %>
   privacy_policy_url: <%= ENV['PRIVACY_POLICY_URL'] %>
 
